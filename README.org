@@ -1,0 +1,31 @@
+#+title: Dmenu - Configuration
+#+author: Rumen Mitov
+#+email: rumenmitov@protonmail.com
+
+* Installation
+Inside the *dmenu* directory:
+#+begin_src shell
+  sudo make clean install
+#+end_src
+
+* Development
+All of these steps are inside the *dmenu* directory.
+
+#+begin_src shell
+  # Get patch
+  cd patches
+  wget <patch-url>
+  git add <patch-file>
+  cd ../
+
+  # Apply patch
+  patch -p1 < patches/<patch-file>
+
+  # Fix FAILED files
+
+  # Difftool to apply changes to the user config
+  nvim -d config.h config.def.h
+
+  # Rebuild
+  sudo make clean install
+#+end_src
