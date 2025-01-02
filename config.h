@@ -9,11 +9,16 @@ static const char *fonts[] = {
     "Noto Color Emoji:size=18",
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
+
+static const char col_bg[]                       = "#27251f";
+static const char col_active[]                   = "#9bf6ff";
+static const char col_inactive[]                 = "#c4ced4";
+ 
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel] = { "#d000ff", "#000000" },
-	[SchemeOut] = { "#000000", "#00ffff" },
+	[SchemeNorm] = { col_inactive, col_bg },
+	[SchemeSel] = { col_active, col_bg },
+	[SchemeOut] = { col_inactive, col_bg },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 4;
