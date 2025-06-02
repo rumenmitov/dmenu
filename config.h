@@ -3,7 +3,7 @@
 
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
 static int fuzzy  = 1;                      /* -F  option; if 0, dmenu doesn't use fuzzy matching */
-static int centered = 1;                    /* -c option; centers dmenu on screen */
+static int centered = 0;                    /* -c option; centers dmenu on screen */
 static int min_width = 500;                    /* minimum width when centered */
 static const float menu_height_ratio = 4.0f;  /* This is the ratio used in the original calculation */
 
